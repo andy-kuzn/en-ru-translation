@@ -17,8 +17,9 @@ def root():
 
     return {"message": "Hello, world!"}
 
+
 @app.post("/predict/")
 def predict(item: Item):
     """Translation of English text to Russian"""
-    
+
     return translator(item.text)[0]

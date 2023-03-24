@@ -13,7 +13,5 @@ def test_read_main():
 def test_predict_translation():
     response = client.post("/predict/",
                            json={"text": "I hate machine learning!"})
-
-
     assert response.status_code == 200
     assert response.json() == {"translation_text": "Ненавижу машинное обучение!"}
